@@ -36,6 +36,7 @@ class TodoListViewController: UIViewController {
         searchVontroller.searchBar.searchTextField.tintColor = whiteColor
         searchVontroller.searchBar.searchTextField.textColor = whiteColor
         
+        // Set text color for searchBar
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes
             .updateValue(whiteColor!,
                          forKey:NSAttributedString.Key.foregroundColor)

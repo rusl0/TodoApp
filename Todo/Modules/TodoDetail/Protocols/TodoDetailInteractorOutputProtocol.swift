@@ -9,6 +9,6 @@ import Foundation
 
 protocol TodoDetailInteractorOutputProtocol: AnyObject {
     
-    // INTERACTOR -> PRESENTER
+    // Interactor -> Presenter
     func didEditTodo(_ todo: TodoItem)
 }

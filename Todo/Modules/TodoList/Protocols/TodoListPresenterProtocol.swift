@@ -13,6 +13,8 @@ protocol TodoListPresenterProtocol: AnyObject {
     var interactor: TodoListInteractorInputProtocol? { get set }
     var router: TodoListRouterProtocol? { get set }
     
+    // View -> Presneter
+    
     func viewWillAppear()
     func showTodoDetail(_ todo: TodoItem)
     func showShare(_ todo: TodoItem)

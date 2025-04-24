@@ -8,6 +8,7 @@
 import Foundation
 
 protocol TodoListInteractorOutputProtocol: AnyObject {
+    // Interactor -> Presenter
     func didAddTodo(_ todo: TodoItem)
     func didRemoveTodo(_ todo: TodoItem)
     func didRetrieveTodos(_ todos: [TodoItem])

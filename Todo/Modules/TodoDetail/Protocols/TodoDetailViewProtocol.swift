@@ -9,6 +9,6 @@ import Foundation
 
 protocol TodoDetailViewProtocol: AnyObject {
     var presenter: TodoDetailPresenterProtocol? { get set }
-    
+    // Presenter -> View
     func showTodo(_ todo: TodoItem)
 }

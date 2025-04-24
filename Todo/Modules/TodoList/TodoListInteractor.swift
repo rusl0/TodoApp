@@ -48,7 +48,9 @@ class TodoListInteractor: TodoListInteractorInputProtocol {
         }
     }
     
+    // Fetch data from remote
     func fetchTodos() {
+        
         
         guard !UserDefaults.standard.bool(forKey: "DataIsUpdated"),
         let url = URL(string: urlString) else {
@@ -57,11 +59,13 @@ class TodoListInteractor: TodoListInteractorInputProtocol {
         
         let request = URLRequest(url: url)
         
+        // loading data asynchronously
         let task = URLSession.shared.dataTask(with: request) { data, _, _ in
             guard let jsonData = data else {
                 return
             }
             
+            // Parse JSON to data model
             guard let todos = try? JSONDecoder().decode(TodosDTO.self, from:  jsonData) else { return }
             self.todoStore.addTodos(from: todos.todos)
             
@@ -69,6 +73,7 @@ class TodoListInteractor: TodoListInteractorInputProtocol {
             
             self.todoStore.loadData()
             DispatchQueue.main.async {
+                // pass data to presenter
                 self.presenter?.didRetrieveTodos(self.todos)
             }
         }

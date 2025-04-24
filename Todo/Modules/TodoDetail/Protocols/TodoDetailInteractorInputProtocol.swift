@@ -12,6 +12,6 @@ protocol TodoDetailInteractorInputProtocol: AnyObject {
     var presenter: TodoDetailInteractorOutputProtocol? { get set }
     var todoItem: TodoItem? { get set }
     
-    // PRESENTER -> INTERACTOR
+    // Presenter -> Interactor
     func editTodo(title: String, detail: String)
 }

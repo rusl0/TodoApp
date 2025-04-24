@@ -10,6 +10,7 @@ import Foundation
 protocol TodoListInteractorInputProtocol: AnyObject {
     var presenter: TodoListInteractorOutputProtocol? { get set }
     
+    // Presenter -> Interactor
     func retrieveTodos()
     func saveTodo(_ todo: TodoItem)
     func deleteTodo(_ todo: TodoItem)

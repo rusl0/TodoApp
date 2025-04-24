@@ -8,6 +8,8 @@
 import Foundation
 
 protocol TodoListRouterProtocol: AnyObject {
+    
+    // Presenter -> Router
     func presentToDoDetailScreen(from view: TodoListViewProtocol, for todo: TodoItem)
     func presentShare(from view:TodoListViewProtocol, for todo: TodoItem)
 }

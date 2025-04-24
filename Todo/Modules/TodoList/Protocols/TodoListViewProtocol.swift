@@ -10,6 +10,7 @@ import Foundation
 protocol TodoListViewProtocol: AnyObject {
     var presenter: TodoListPresenterProtocol? { get set }
     
+    // Presenter -> View
     func showTodos(_ todos: [TodoItem])
     func removeTodo(_ todo: TodoItem)
     func updateCounter()

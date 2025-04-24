@@ -12,6 +12,7 @@ protocol TodoDetailPresenterProtocol: AnyObject {
     var interactor: TodoDetailInteractorInputProtocol? { get set}
     var router: TodoDetailRouterProtocol? { get set }
     
+    // View -> Presneter
     func viewDidLoad()
     func editTodo(title:String, detail: String)
 }

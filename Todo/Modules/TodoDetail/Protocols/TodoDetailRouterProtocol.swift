@@ -9,6 +9,7 @@ import UIKit
 
 protocol TodoDetailRouterProtocol: AnyObject {
     
+    // Presenter -> Router
     static func createTodoDetailRouterModule(with todo: TodoItem) -> UIViewController
     
     func navigateBackToListViewController(from view: TodoDetailViewProtocol)
