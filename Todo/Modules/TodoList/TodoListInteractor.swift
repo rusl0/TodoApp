@@ -67,8 +67,9 @@ class TodoListInteractor: TodoListInteractorInputProtocol {
             
             UserDefaults.standard.set(true, forKey: "DataIsUpdated")
             
+            self.todoStore.loadData()
             DispatchQueue.main.async {
-                self.retrieveTodos()
+                self.presenter?.didRetrieveTodos(self.todos)
             }
         }
         task.resume()
